@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "tailwindcss";
+/* Puedes añadir tus estilos personalizados aquí si lo deseas */
+/* Por ejemplo, para la fuente Inter si no se carga por defecto */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Pequeña animación para fadeIn */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease-out forwards;
+}

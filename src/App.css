@@ -1,0 +1,138 @@
+/* src/App.css o src/index.css */
+
+/* Estilos base para el contenedor principal */
+#root {
+  max-width: 100%; /* Ocupa todo el ancho en móviles */
+  margin: 0;
+  padding: 1rem;
+  min-height: 100vh;
+  background-color: #fff5f7; /* Fondo rosado claro */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contenedor de la tarjeta principal */
+.card {
+  width: 100%;
+  max-width: 600px; /* Ancho máximo para desktop */
+  padding: 2rem;
+  margin: 1rem;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 
+              0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover para la tarjeta */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 
+              0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Estilos para los botones */
+.button-primary {
+  background-color: #ec4899; /* Rosa bonito */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px; /* Botones completamente redondeados */
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.button-primary:hover {
+  background-color: #db2777; /* Rosa más oscuro al hover */
+  transform: scale(1.05);
+}
+
+/* Estilos para los inputs */
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #f3f4f6;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #ec4899;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.2);
+}
+
+/* Estilos para el texto */
+.text-title {
+  color: #831843; /* Rosa oscuro */
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.text-subtitle {
+  color: #9d174d;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Efectos de animación */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+  .card {
+    padding: 1.5rem;
+    margin: 0.5rem;
+  }
+  
+  .text-title {
+    font-size: 1.5rem;
+  }
+  
+  .button-primary {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Estilos específicos para tu test */
+.test-question {
+  margin-bottom: 2rem;
+}
+
+.test-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem;
+  background-color: #fdf2f8;
+  border: 1px solid #fbcfe8;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.test-option:hover {
+  background-color: #fce7f3;
+  border-color: #f9a8d4;
+}
+
+.test-option.selected {
+  background-color: #fbcfe8;
+  border-color: #ec4899;
+  font-weight: 600;
+}
